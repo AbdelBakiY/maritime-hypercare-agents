@@ -1,0 +1,32 @@
+# Secrets & local config
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+app/.streamlit/secrets.toml
+connections.toml
+*.pem
+*.p8
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Snowflake CLI build output
+app/output/
+output/
+
+# Knowledge-base documents (keep them out of the repo, upload them to the stage)
+knowledge_docs/*
+!knowledge_docs/README.md
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

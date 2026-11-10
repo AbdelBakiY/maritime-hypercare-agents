@@ -1,0 +1,13 @@
+# Local development (Streamlit UI + REST API). The Snowflake deployment uses app/pyproject.toml.
+streamlit>=1.40
+snowflake-snowpark-python>=1.20
+langchain-core>=0.3
+langchain-openai>=0.3
+langgraph>=0.3
+pydantic>=2
+python-dotenv>=1.0
+fastapi>=0.110
+uvicorn[standard]>=0.29
+# notebooks/evaluation.ipynb
+pandas
+matplotlib

@@ -1,0 +1,22 @@
+# Dependencies installed by Streamlit in Snowflake (container runtime).
+# Installing packages from PyPI requires an External Access Integration:
+# https://docs.snowflake.com/en/developer-guide/streamlit/additional-features#external-network-access-in-sis
+[project]
+name = "maritime-hypercare-agents"
+requires-python = "~=3.11.0"
+version = "1.0.0"
+description = "Multi-agent hypercare support for maritime pricing (LangGraph + Snowflake Cortex)"
+dependencies = [
+    "streamlit[snowflake]",
+    "langchain-core>=0.3",
+    "langchain-openai>=0.3",
+    "langgraph>=0.3",
+    "pydantic>=2",
+]
+
+[tool.uv]
+constraint-dependencies = ["numba>=0.56.0"]
+exclude-newer = "7 days"
+
+[tool.uv.exclude-newer-package]
+streamlit = false
